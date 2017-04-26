@@ -11,7 +11,7 @@ public abstract class Discountable {
     }
 
     public boolean shouldApplyDiscount(BigDecimal currentQuantity) {
-        if (triggerQuantity.compareTo(currentQuantity) > 0)
+        if (currentQuantity.compareTo(triggerQuantity) > 0)
             return true;
         return false;
     }

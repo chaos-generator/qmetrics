@@ -29,7 +29,7 @@ public class BuyXforYDiscount extends Discountable {
     @Override
     public String discountMsg() {
         NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
-        return String.format("%s for £%s", super.getTriggerQuantity()
+        return String.format("%s for %s", super.getTriggerQuantity()
                         .longValue(), defaultFormat
                         .format(this.discountedPrice));
     }

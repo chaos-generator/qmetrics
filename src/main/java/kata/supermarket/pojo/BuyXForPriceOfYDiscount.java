@@ -32,7 +32,7 @@ public class BuyXForPriceOfYDiscount extends Discountable {
 
     @Override
     public String discountMsg() {
-        return String.format("%s for %s ", super.getTriggerQuantity()
+        return String.format("%s for %s", super.getTriggerQuantity()
                         .longValue(), this.targetQuantity.longValue());
     }
 }
