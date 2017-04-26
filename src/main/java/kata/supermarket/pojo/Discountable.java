@@ -2,12 +2,27 @@ package kata.supermarket.pojo;
 
 import java.math.BigDecimal;
 
-public interface Discountable {
+public abstract class Discountable {
 
-    boolean applyDiscount();
+    private final BigDecimal triggerQuantity;
 
-    BigDecimal totalDiscounted();
+    public Discountable(BigDecimal triggerQuantity) {
+        this.triggerQuantity = triggerQuantity;
+    }
 
-    String discountMsg();
+    public boolean shouldApplyDiscount(BigDecimal currentQuantity) {
+        if (triggerQuantity.compareTo(currentQuantity) > 0)
+            return true;
+        return false;
+    }
+
+    public BigDecimal getTriggerQuantity() {
+        return triggerQuantity;
+    }
+
+    abstract BigDecimal totalDiscounted(BigDecimal currentQuantity,
+                    BigDecimal unitPrice);
+
+    abstract String discountMsg();
 
 }
