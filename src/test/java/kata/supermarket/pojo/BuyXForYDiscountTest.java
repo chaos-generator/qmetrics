@@ -15,8 +15,7 @@ public class BuyXForYDiscountTest {
 
     @Before
     public void setup() {
-        discount = new BuyXforYDiscount(new BigDecimal(2L),
-                        new BigDecimal(1L));
+        discount = new BuyXforYDiscount(new BigDecimal(2L), new BigDecimal(1L));
     }
 
     @Test
@@ -26,7 +25,7 @@ public class BuyXForYDiscountTest {
 
     @Test
     public void shouldApplyDiscount_successFalse() {
-        assertFalse(discount.shouldApplyDiscount(new BigDecimal(2L)));
+        assertFalse(discount.shouldApplyDiscount(new BigDecimal(1L)));
     }
 
     @Test

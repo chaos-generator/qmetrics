@@ -21,16 +21,15 @@ public class BuyXforYDiscount extends Discountable {
     @Override
     public BigDecimal totalDiscounted(BigDecimal currentQuantity,
                     BigDecimal unitPrice) {
-        return currentQuantity
-                        .divideToIntegralValue(super.getTriggerQuantity())
-                        .multiply(discountedPrice);
+        return currentQuantity.divideToIntegralValue(
+                        super.getTriggerQuantity()).multiply(
+                        discountedPrice);
     }
 
     @Override
     public String discountMsg() {
         NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
-        return String.format("%s for %s", super.getTriggerQuantity()
-                        .longValue(), defaultFormat
-                        .format(this.discountedPrice));
+        return String.format("%s for %s", super.getTriggerQuantity(),
+                        defaultFormat.format(this.discountedPrice));
     }
 }
