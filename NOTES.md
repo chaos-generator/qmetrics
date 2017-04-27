@@ -18,3 +18,12 @@ the locale of the computer running.
 
 At this point, I needed a class to actually calculate my bill. And another to 
 display my bill.
+
+I fixed the method to calculate the total, but I didn't have a chance to fix 
+the method to calculate the savings after my three hours ended.
+
+If I had more time, I would have added more test for the existing pojos and I 
+would have a proper test for the Model and views too.
+I'd also run cobertura to figure out my test coverage and see where I'd need 
+to add more tests, and I'd also run Find Bugs to find potential items in my 
+code to fix, eg magical numbers on the tests.
